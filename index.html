@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Broth Heaven</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
 </head>
 
 <body>
     <!-- Header -->
-    <header>
+    <header class="header">
         <div id="logo">
             <i class='bx bx-bowl-hot'></i> Warbur
         </div>
@@ -21,41 +22,66 @@
             <a href="Youtube/index.html"><i class='bx bxl-youtube'></i> YouTube</a>
             <a href="https://github.com/Pliuyy"><i class='bx bxl-github'></i> GitHub</a>
         </nav>
+        <div class="menu-toggle">
+            <i class='bx bx-menu'></i>
+        </div>
     </header>
 
-    <!-- Parallax Section -->
-    <div class="parallax">
-        <h2 id="heading">Broth Heaven</h2>
-        <img src="Mienar.gif" alt="Mountain Animation" id="mountain">
-    </div>
-
-    <!-- Content Section -->
-    <section>
-        <h2>Story of Broth Heaven</h2>
-        <p>
-            Di sebuah sudut kota yang tak terlalu ramai, berdiri sebuah warung bubur bernama <em>Broth Heaven</em>. Walaupun sederhana, warung ini menjadi tempat cerita-cerita aneh namun inspiratif. Penasaran dengan rahasia dan kisah Kipli, penjual bubur
-            yang dulunya seorang ksatria legendaris? Temukan cerita serunya di sini!
-        </p>
-
-        <h3><b>Poin Penting tentang Warbur:</b></h3>
-        <ul>
-            <li>??? tidak ada yang spesial.</li>
-            <li>Tidak ada hal penting, hanya nostalgia.</li>
-            <li>Sebuah warung bubur sederhana.</li>
-            <li>Tempat uji coba ramuan misterius.</li>
-        </ul>
-
-        <blockquote>
-            "Be-Betsuni... Bukannya aku mau punya pacar yah, hmph!" - Anomali 1
-        </blockquote>
-
-        <div class="home-sci">
-            <a href="https://www.instagram.com/pliuyy_/"><i class='bx bxl-instagram'></i></a>
-            <a href="Discord/index.html"><i class='bx bxl-discord'></i></a>
-            <a href="#"><i class='bx bxl-twitter'></i></a>
-            <a href="#"><i class='bx bxl-youtube'></i></a>
+    <!-- Hero Section with Parallax -->
+    <section class="hero">
+        <div class="parallax-bg"></div>
+        <div class="hero-content">
+            <h1>Broth Heaven</h1>
+            <p class="tagline">Where Legends Dine and Mysteries Unfold</p>
+            <img src="Mienar.gif" alt="Mountain Animation" class="hero-image">
+        </div>
+        <div class="scroll-down">
+            <i class='bx bx-chevron-down'></i>
         </div>
     </section>
-</body>
 
+    <!-- Content Section -->
+    <main class="content">
+        <section class="story-section">
+            <h2>Story of Broth Heaven</h2>
+            <div class="divider"></div>
+            <p class="story-text">
+                Di sebuah sudut kota yang tak terlalu ramai, berdiri sebuah warung bubur bernama <em>Broth Heaven</em>. Walaupun sederhana, warung ini menjadi tempat cerita-cerita aneh namun inspiratif. Penasaran dengan rahasia dan kisah Kipli, penjual bubur
+                yang dulunya seorang ksatria legendaris? Temukan cerita serunya di sini!
+            </p>
+
+            <div class="features">
+                <h3>Poin Penting tentang Warbur:</h3>
+                <ul class="feature-list">
+                    <li><i class='bx bx-question-mark'></i> ??? tidak ada yang spesial.</li>
+                    <li><i class='bx bx-time'></i> Tidak ada hal penting, hanya nostalgia.</li>
+                    <li><i class='bx bx-store'></i> Sebuah warung bubur sederhana.</li>
+                    <li><i class='bx bx-flask'></i> Tempat uji coba ramuan misterius.</li>
+                </ul>
+            </div>
+
+            <blockquote class="quote">
+                <i class='bx bxs-quote-alt-left'></i>
+                "Be-Betsuni... Bukannya aku mau punya pacar yah, hmph!" 
+                <span>- Anomali 1</span>
+                <i class='bx bxs-quote-alt-right'></i>
+            </blockquote>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="social-links">
+            <a href="https://www.instagram.com/pliuyy_/" class="social-link"><i class='bx bxl-instagram'></i></a>
+            <a href="Discord/index.html" class="social-link"><i class='bx bxl-discord'></i></a>
+            <a href="#" class="social-link"><i class='bx bxl-twitter'></i></a>
+            <a href="#" class="social-link"><i class='bx bxl-youtube'></i></a>
+        </div>
+        <div class="footer-text">
+            <p>&copy; 2023 Broth Heaven | Created with <i class='bx bxs-heart'></i> by Pliuyy</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
