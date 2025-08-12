@@ -1,17 +1,54 @@
-const heading = document.getElementById("heading");
-const moon = document.getElementById("moon");
-const stars = document.getElementById("stars");
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Menu Toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu');
+    
+    menuToggle.addEventListener('click', function() {
+        menu.classList.toggle('active');
+        this.classList.toggle('bx-x');
+    });
 
-window.addEventListener("scroll", () => {
-    let value = window.scrollY;
+    // Header Scroll Effect
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('.header');
+        header.classList.toggle('scrolled', window.scrollY > 50);
+    });
 
-    heading.style.marginTop = value * 1.5 + 'px';
-    moon.style.transform = `translateX(${value * 0.2}px)`;
-    stars.style.transform = `translateY(${value * 0.1}px)`;
-});
+    // Smooth Scrolling for Anchor Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
 
-// Add a glow effect on scroll
-window.addEventListener("scroll", () => {
-    document.body.style.backgroundColor =
-        `rgb(${25 + value * 0.05}, ${25 + value * 0.05}, ${40 + value * 0.1})`;
+    // Scroll Down Button
+    const scrollDownBtn = document.querySelector('.scroll-down');
+    if (scrollDownBtn) {
+        scrollDownBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: document.querySelector('.content').offsetTop - 80,
+                behavior: 'smooth'
+            });
+        });
+    }
+
+    // Parallax Effect
+    window.addEventListener('scroll', function() {
+        const parallaxBg = document.querySelector('.parallax-bg');
+        if (parallaxBg) {
+            const scrollPosition = window.pageYOffset;
+            parallaxBg.style.transform = `translateY(${scrollPosition * 0.5}px)`;
+        }
+    });
 });
